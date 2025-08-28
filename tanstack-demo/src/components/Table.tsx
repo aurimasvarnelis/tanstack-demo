@@ -29,7 +29,7 @@ export function Table<TData>({table}: TableProps<TData>) {
                                         header.column.columnDef.header,
                                         header.getContext()
                                     )}
-                                {/* 🔹 Sorting Indicator */}
+                                {/* Sorting Indicator */}
                                 {{
                                     asc: ' 🔼',
                                     desc: ' 🔽',
