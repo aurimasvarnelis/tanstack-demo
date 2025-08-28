@@ -1,5 +1,5 @@
-import { useQueryClient} from '@tanstack/react-query'
-import { useParams, Link } from '@tanstack/react-router'
+import {useQueryClient} from '@tanstack/react-query'
+import {useParams, Link} from '@tanstack/react-router'
 
 type User = {
     id: string
@@ -9,7 +9,7 @@ type User = {
 }
 
 export default function UserDetail() {
-    const { userId } = useParams({ from: '/user/$userId' })
+    const {userId} = useParams({from: '/user/$userId'})
 
     const queryClient = useQueryClient()
     const users = queryClient.getQueryData<User[]>(['users'])
@@ -23,7 +23,7 @@ export default function UserDetail() {
             <img
                 src={user.picture}
                 alt={user.name}
-                style={{ width: '150px', borderRadius: '50%', marginBottom: '1rem' }}
+                style={{width: '150px', borderRadius: '50%', marginBottom: '1rem'}}
             />
             <p>Email: {user.email}</p>
             <p>ID: {user.id}</p>

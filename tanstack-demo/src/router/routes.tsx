@@ -1,10 +1,10 @@
-import { createRootRoute, createRoute, Router, Outlet } from '@tanstack/react-router';
+import {createRootRoute, createRoute, Router, Outlet} from '@tanstack/react-router';
 import Users from '../pages/Users';
 import UserDetail from '../pages/UserDetail';
 
 // Create the root route
 const rootRoute = createRootRoute({
-    component: () => <div><Outlet /></div>, // Layout wrapper
+    component: () => <div><Outlet/></div>, // Layout wrapper
 });
 
 // Define child routes
@@ -24,4 +24,4 @@ const userRoute = createRoute({
 const routeTree = rootRoute.addChildren([indexRoute, userRoute]);
 
 // Create the router instance
-export const router = new Router({ routeTree });
+export const router = new Router({routeTree});
